@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>都道府県ルーレット</title>
+    <meta name="description" content="日本の47都道府県からランダムに1つを選ぶルーレットアプリ。ドラムロール演出付き！">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎰 都道府県ルーレット</h1>
+            <p class="subtitle">チェックした都道府県からランダムで1つを選びます</p>
+        </header>
+
+        <main class="main">
+            <!-- ルーレット表示エリア -->
+            <section class="roulette-section">
+                <div class="roulette-display" id="rouletteDisplay">
+                    <span class="prefecture-text" id="prefectureText">?</span>
+                </div>
+                <button class="start-button" id="startButton">
+                    <span class="button-text">スタート！</span>
+                    <span class="button-icon">🎲</span>
+                </button>
+            </section>
+
+            <!-- 結果表示エリア -->
+            <section class="result-section hidden" id="resultSection">
+                <div class="result-card">
+                    <p class="result-label">選ばれたのは...</p>
+                    <h2 class="result-prefecture" id="resultPrefecture"></h2>
+                    <div class="confetti" id="confetti"></div>
+                </div>
+            </section>
+
+            <!-- 都道府県選択エリア -->
+            <section class="selection-section">
+                <div class="selection-header">
+                    <h2 class="section-title">都道府県を選択</h2>
+                    <div class="selection-controls">
+                        <button class="control-button" id="selectAllBtn">全選択</button>
+                        <button class="control-button" id="deselectAllBtn">全解除</button>
+                        <span class="selected-count" id="selectedCount">0 / 47 選択中</span>
+                    </div>
+                </div>
+                
+                <div class="prefectures-grid" id="prefecturesGrid">
+                    <!-- JavaScriptで動的に生成 -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 都道府県ルーレット</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
